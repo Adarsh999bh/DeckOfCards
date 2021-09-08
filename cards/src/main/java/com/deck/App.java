@@ -8,6 +8,11 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        //welcome message
+        System.out.println( "welcome to cards game" );
+
+        //creating array of Cards class so that picking randomnly becomes easy
+        Cards[] cards={new Cards("Clubs"),new Cards("Diamonds"),new Cards("Hearts"),new Cards("Spades")};
+
     }
 }
