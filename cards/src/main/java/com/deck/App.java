@@ -17,6 +17,7 @@ public class App
         Players players=new Players();
         players.setPlayerSuite();
         players.setSequenceOfPlayers();
+        cd.shuffle();
 
     }
 }

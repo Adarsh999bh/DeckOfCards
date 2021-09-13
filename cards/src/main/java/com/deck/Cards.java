@@ -1,6 +1,7 @@
 package com.deck;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 // class cards 
@@ -19,6 +20,12 @@ public class Cards {
             for(int j=0;j<ranks.length;j++){
                 this.suitOfCards.add(new NodeForCard(suite[i], ranks[j]));
             }
+        }
+    }
+    public void shuffle(){
+        for(NodeForCard nd:suitOfCards){
+            int randomIndex=(int) (Math.floor(Math.random()*52)%52);
+            Collections.swap(this.suitOfCards, 0, randomIndex);
         }
     }
 }
