@@ -16,6 +16,7 @@ public class App
         cd.initilizeSuitOfCards();
         Players players=new Players();
         players.setPlayerSuite();
+        players.setSequenceOfPlayers();
 
     }
 }
