@@ -1,6 +1,5 @@
 package com.deck;
 
-import java.util.List;
 
 /**
  * Hello world!
@@ -17,7 +16,18 @@ public class App
         Players players=new Players();
         players.setPlayerSuite();
         players.setSequenceOfPlayers();
-        cd.shuffle();
-
+        distributeCards(cd, players);
+    }
+    public static void distributeCards(Cards cd,Players players){
+        for(int i=0;i<9;i++){
+            for(NodeForPlayer Player:players.playersSuite){
+                while (cd.suitOfCards.get(0).taken=true) {
+                    cd.shuffle();
+                }
+                Player.playerCardSuite.add(cd.suitOfCards.get(0));
+                cd.suitOfCards.get(0).taken=true;
+                Player.map.put(cd.suitOfCards.get(0).suite, Player.map.get(cd.suitOfCards.get(0).suite)+1);
+            }
+        }
     }
 }
