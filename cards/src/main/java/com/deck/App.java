@@ -1,6 +1,5 @@
 package com.deck;
 
-import java.util.Collections;
 
 /**
  * Main class app which creates objects of both Players and Cards and
